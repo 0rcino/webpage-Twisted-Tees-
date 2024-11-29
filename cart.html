@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Shopping Cart</title>
+ <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+ <div class="container">
+  <div class="cart">
+   <h1>Cart</h1>
+   <div class="cart-header">
+    <span>Product</span>
+    <span>Count</span>
+    <span>Price</span>
+   </div>
+   <div class="cart-items">
+    <div class="cart-item">
+     <div class="product-info">
+      <img src="product1.jpg" alt="Product Image">
+      <div>
+       <h2>Product 1</h2>
+       <p>Category: White T-Shirt</p>
+      </div>
+     </div>
+     <div class="quantity">
+      <button class="decrement">-</button>
+      <span>1</span>
+      <button class="increment">+</button>
+     </div>
+     <div class="price" data-unit-price="1000">₱1000</div>
+    </div>
+   </div>
+  </div>
+  <div class="summary">
+   <h2>Summary</h2>
+   <div class="promo">
+    <input type="text" placeholder="Promo Code">
+    <button>Apply</button>
+   </div>
+   <div class="total">
+    <span>Total:</span>
+    <span class="total-price">₱0</span>
+   </div>
+   <button class="checkout-btn">Continue to Checkout</button>
+  </div>
+ </div>
+
+ <script src="cart.js"></script>
+</body>
+
+</html>

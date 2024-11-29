@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,6 @@ body {
     gap: 20px;
 }
 
-/* Cart Section */
 .cart {
     flex: 3;
     background: #fff;
@@ -85,7 +84,6 @@ body {
     font-weight: bold;
 }
 
-/* Summary Section */
 .summary {
     flex: 1;
     background: #fff;

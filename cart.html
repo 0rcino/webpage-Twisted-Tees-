@@ -18,21 +18,7 @@
     <span>Price</span>
    </div>
    <div class="cart-items">
-    <div class="cart-item">
-     <div class="product-info">
-      <img src="product1.jpg" alt="Product Image">
-      <div>
-       <h2>Product 1</h2>
-       <p>Category: White T-Shirt</p>
-      </div>
-     </div>
-     <div class="quantity">
-      <button class="decrement">-</button>
-      <span>1</span>
-      <button class="increment">+</button>
-     </div>
-     <div class="price" data-unit-price="1000">₱1000</div>
-    </div>
+    <!-- Products will be dynamically added here -->
    </div>
   </div>
   <div class="summary">
@@ -43,9 +29,11 @@
    </div>
    <div class="total">
     <span>Total:</span>
-    <span class="total-price">₱0</span>
+    <span class="total-price" id="total-price">₱0</span>
    </div>
-   <button class="checkout-btn">Continue to Checkout</button>
+   <a href="payment.html">
+    <button class="checkout-btn" id="checkout-btn">Continue to Checkout</button>
+   </a>
   </div>
  </div>
 

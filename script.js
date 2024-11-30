@@ -3,11 +3,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const priceElement = card.querySelector('.price');
         const sizeButtons = card.querySelectorAll('.menu_icon i');
 
+        // Update price when size is selected
         sizeButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const newPrice = button.getAttribute('data-price');
                 priceElement.textContent = newPrice;
+
+                // Highlight selected size
+                sizeButtons.forEach((btn) => btn.classList.remove('selected'));
+                button.classList.add('selected');
             });
+        });
+
+        // Add to Cart button functionality
+        const addToCartButton = card.querySelector('.cart_btn');
+        addToCartButton.addEventListener('click', () => {
+            const productName = card.querySelector('h2').textContent;
+            const productImage = card.querySelector('img').src;
+            const selectedSizeElement = card.querySelector(
+                '.menu_icon i.selected'
+            );
+            const selectedSize = selectedSizeElement
+                ? selectedSizeElement.getAttribute('data-size')
+                : 'Default';
+            const selectedPrice = selectedSizeElement
+                ? selectedSizeElement.getAttribute('data-price')
+                : priceElement.textContent;
+
+            // Save product details to localStorage
+            const cartItems =
+                JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.push({
+                name: productName,
+                size: selectedSize,
+                price: selectedPrice,
+                image: productImage,
+                quantity: 1,
+            });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
         });
     });
 });
@@ -74,4 +107,3 @@ function validateSignIn() {
 
     return true;
 }
-

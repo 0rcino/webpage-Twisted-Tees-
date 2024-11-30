@@ -2,20 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.menu_card').forEach((card) => {
         const priceElement = card.querySelector('.price');
         const sizeButtons = card.querySelectorAll('.menu_icon i');
-
-        // Update price when size is selected
         sizeButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const newPrice = button.getAttribute('data-price');
                 priceElement.textContent = newPrice;
-
-                // Highlight selected size
                 sizeButtons.forEach((btn) => btn.classList.remove('selected'));
                 button.classList.add('selected');
             });
         });
 
-        // Add to Cart button functionality
         const addToCartButton = card.querySelector('.cart_btn');
         addToCartButton.addEventListener('click', () => {
             const productName = card.querySelector('h2').textContent;
@@ -30,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? selectedSizeElement.getAttribute('data-price')
                 : priceElement.textContent;
 
-            // Save product details to localStorage
             const cartItems =
                 JSON.parse(localStorage.getItem('cartItems')) || [];
             cartItems.push({

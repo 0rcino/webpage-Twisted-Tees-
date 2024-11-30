@@ -36,9 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         totalPriceElement.textContent = `₱${total}`;
-
-        // Save the total price in localStorage for use in the payment page
-        localStorage.setItem('totalPrice', total);
     }
 
     function updateTotal() {

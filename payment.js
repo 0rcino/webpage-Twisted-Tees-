@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let total = 0;
 
-    // Load cart items into the payment section
     cartItems.forEach((item) => {
         const productElement = document.createElement('div');
         productElement.innerHTML = `
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     totalPriceElement.textContent = `₱${total}`;
 
-    // Handle payment form submission
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -35,12 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(
             `Your order has been placed!\nName: ${name}\nAddress: ${address}\nPayment Method: ${paymentMethod}`
         );
-
-        // Clear the cart after placing the order
         localStorage.removeItem('cartItems');
         localStorage.removeItem('totalPrice');
-
-        // Optionally, redirect to another page (e.g., order confirmation)
         window.location.href = 'confirmation.html';
     });
 });

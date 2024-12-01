@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.menu_card').forEach((card) => {
         const priceElement = card.querySelector('.price');
         const sizeButtons = card.querySelectorAll('.menu_icon i');
+        const addToCartButton = card.querySelector('.cart_btn');
+        const buyNowButton = card.querySelector('.menu_btn:not(.cart_btn)');
+
         sizeButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const newPrice = button.getAttribute('data-price');
@@ -11,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        const addToCartButton = card.querySelector('.cart_btn');
         addToCartButton.addEventListener('click', () => {
             const productName = card.querySelector('h2').textContent;
             const productImage = card.querySelector('img').src;
@@ -35,6 +37,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 quantity: 1,
             });
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        });
+
+        buyNowButton.addEventListener('click', () => {
+            const productName = card.querySelector('h2').textContent;
+            const productImage = card.querySelector('img').src;
+            const selectedSizeElement = card.querySelector(
+                '.menu_icon i.selected'
+            );
+            const selectedSize = selectedSizeElement
+                ? selectedSizeElement.getAttribute('data-size')
+                : 'Default';
+            const selectedPrice = selectedSizeElement
+                ? selectedSizeElement.getAttribute('data-price')
+                : priceElement.textContent;
+
+            const buyNowItem = {
+                name: productName,
+                size: selectedSize,
+                price: selectedPrice,
+                image: productImage,
+            };
+
+            localStorage.setItem('buyNowItem', JSON.stringify(buyNowItem));
+            window.location.href = 'payment.html';
         });
     });
 });
@@ -100,4 +126,28 @@ function validateSignIn() {
     }
 
     return true;
+}
+
+function submitForm(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    const formData = new FormData(document.getElementById('contactForm'));
+
+    fetch('submit.php', {
+        method: 'POST',
+        body: formData,
+    })
+        .then((response) => response.text())
+        .then((data) => {
+            if (data.includes('Your message has been saved successfully!')) {
+                // If submission is successful, reset the form
+                document.getElementById('contactForm').reset();
+                alert('Your message has been submitted successfully!');
+            } else {
+                alert('There was an error submitting your message.');
+            }
+        })
+        .catch((error) => {
+            alert('Error: ' + error);
+        });
 }

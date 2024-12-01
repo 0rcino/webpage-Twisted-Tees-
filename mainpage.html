@@ -30,7 +30,7 @@
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Product">Product</a></li>
-                <li><a href="#Services">Services</a></li>
+                <li><a href="#Showcase">Showcase</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <li><a href="#Team">Team</a></li>
                 <li class="cart_icon"><a href="cart.html"><i class="fa fa-shopping-cart"
@@ -94,10 +94,7 @@
         <swiper-container class="menu_box" slides-per-view="4" space-between="10px">
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/twisted1.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/twisted1.png">
                 </div>
                 <div class="menu_info">
                     <h2>Black T-Shirt Twisted Tees</h2>
@@ -111,13 +108,9 @@
                     <a href="cart.html" class="menu_btn cart_btn">Add to Cart</a>
                 </div>
             </swiper-slide>
-
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/4.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/4.png">
                 </div>
                 <div class="menu_info">
                     <h2>Blue T-Shirt Twisteed Tees</h2>
@@ -133,10 +126,7 @@
             </swiper-slide>
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/5.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/5.png">
                 </div>
                 <div class="menu_info">
                     <h2>Pink T-Shirt Twisted Tees</h2>
@@ -152,10 +142,7 @@
             </swiper-slide>
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/1.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/1.png">
                 </div>
                 <div class="menu_info">
                     <h2>White T-Shirt</h2>
@@ -171,10 +158,7 @@
             </swiper-slide>
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/1.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/1.png">
                 </div>
                 <div class="menu_info">
                     <h2>White T-Shirt</h2>
@@ -190,10 +174,7 @@
             </swiper-slide>
             <swiper-slide class="menu_card">
                 <div class="menu_image">
-                    <img src="product/1.png" alt="White T-Shirt">
-                </div>
-                <div class="small_card">
-                    <i class=""></i>
+                    <img src="product/1.png">
                 </div>
                 <div class="menu_info">
                     <h2>White T-Shirt</h2>
@@ -210,8 +191,8 @@
         </swiper-container>
     </div>
     <!--Services-->
-    <div class="gallery" id="Services">
-        <h1>Other<span>Services</span></h1>
+    <div class="gallery" id="Showcase">
+        <h1>Other<span>Apparel Showcase</span></h1>
         <swiper-container class="gallery_image_box" slides-per-view="4" space-between="10px">
             <swiper-slide class="gallery_image">
                 <h3>Black T-Shirt Twisted Tees</h3>
@@ -239,31 +220,40 @@
             </swiper-slide>
         </swiper-container>
     </div>
-    <!--Contact-->
+    <!-- Contact -->
     <div class="contact" id="Contact">
         <h1>Contact <span>Us</span></h1>
         <div class="contact_main">
             <div class="contact_image">
-                <img src="logo/logo.png">
+                <img src="logo/logo.png" alt="Logo">
             </div>
-            <form action="#">
+            <form id="contactForm" action="submit.php" method="POST" onsubmit="submitForm(event)">
                 <div class="input">
                     <p>Name</p>
-                    <input type="text" placeholder="Fullname">
+                    <input type="text" name="name" placeholder="Fullname" required>
                 </div>
                 <div class="input">
                     <p>Email</p>
-                    <input type="email" placeholder="@gmail">
+                    <input type="email" name="email" placeholder="@gmail" required>
                 </div>
                 <div class="input">
                     <p>Number</p>
-                    <input placeholder="+09">
+                    <input type="text" name="number" placeholder="+09" required>
                 </div>
-                </br>
-                <a href="#Contact" class="order_btn" onclick="con('Successful')">Contact Now</a>
+                <div class="input">
+                    <p>Subject</p>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="input">
+                    <p>Message</p>
+                    <textarea name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="order_btn">Contact Now</button>
             </form>
         </div>
     </div>
+
     <!-- Team Section -->
     <div class="team" id="Team">
         <h1>Our <span>Team</span></h1>

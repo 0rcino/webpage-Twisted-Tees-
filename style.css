@@ -227,33 +227,34 @@ section nav ul li a.login_icon::after {
 }
 
 .menu .menu_box .menu_card {
-    width: 180px;
-    height: 400px;
+    width: 200px;
+    height: 420px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 3px 5px 8px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: #fefdfb;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .menu .menu_box .menu_card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .menu .menu_box .menu_card .menu_image {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px;
     overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu .menu_box .menu_card .menu_image img {
@@ -262,44 +263,53 @@ section nav ul li a.login_icon::after {
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .menu .menu_box .menu_card .menu_image:hover img {
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .menu .menu_box .menu_card .menu_info h2 {
     text-align: center;
     margin: 10px 0;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: bold;
     color: #4b2e2e;
+    text-transform: capitalize;
 }
 
 .menu .menu_box .menu_card .menu_info h3 {
     text-align: center;
     font-size: 18px;
     color: #3a3834;
+    margin-bottom: 10px;
 }
 
 .menu .menu_box .menu_card .menu_info .menu_icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     cursor: pointer;
     margin: 10px 0;
     color: #4b2e2e;
-}
-
-.menu .menu_box .menu_card .menu_info .menu_icon {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.menu .menu_box .menu_card .menu_info .menu_icon:hover {
-    color: #6a3a3a;
+.menu .menu_box .menu_card .menu_info .menu_icon i {
+    padding: 5px 10px;
+    border: 1px solid #4b2e2e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon i:hover {
+    background-color: #4b2e2e;
+    color: #fff;
 }
 
 .menu .menu_box .menu_card .menu_info .menu_btn {
@@ -310,12 +320,13 @@ section nav ul li a.login_icon::after {
     color: white;
     background: linear-gradient(45deg, #8b572a, #4b2e2e);
     padding: 10px 20px;
-    margin: 0 auto 10px;
-    width: 200px;
+    margin: 10px auto;
+    width: 180px;
     height: 40px;
     border-radius: 5px;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .menu .menu_box .menu_card .menu_info .menu_btn:hover {
@@ -330,19 +341,21 @@ section nav ul li a.login_icon::after {
 }
 
 .menu .menu_box .menu_card .small_card {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .menu .menu_box .menu_card:hover .small_card {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .gallery {
@@ -490,18 +503,25 @@ section nav ul li a.login_icon::after {
     margin: 5px;
 }
 
-.contact .contact_main form .input input {
+.contact .contact_main form .input input,
+.contact .contact_main form .input textarea {
     width: 300px;
     height: 35px;
     padding: 0 10px;
-    border: contactsolid #cccccc;
+    border: solid 1px #cccccc;
     background: #eeeeee;
     outline: none;
     border-radius: 3px;
 }
 
-.order .contact_main form .input input:focus {
-    border: 2px solid#4b2e2e;
+.contact .contact_main form .input textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact .contact_main form .input input:focus,
+.contact .contact_main form .input textarea:focus {
+    border: 2px solid #4b2e2e;
 }
 
 .contact .contact_main form .order_btn {
@@ -510,7 +530,7 @@ section nav ul li a.login_icon::after {
     color: white;
     width: 40%;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto; /* Centers the button horizontally and adds top/bottom margin */
     text-decoration: none;
     border-radius: 0.5rem;
 }

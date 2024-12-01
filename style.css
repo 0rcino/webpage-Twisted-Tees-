@@ -530,18 +530,21 @@ section nav ul li a.login_icon::after {
     color: white;
     width: 40%;
     text-align: center;
-    margin: 20px auto; /* Centers the button horizontally and adds top/bottom margin */
+    margin: 20px auto;
     text-decoration: none;
     border-radius: 0.5rem;
 }
 
 .team {
     width: 100%;
-    height: 90vh;
-    background-image: url(image/bg1.jpg);
+    height: 100vh;
+    background-image: url(twisted.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding-top: 30px;
+    position: relative;
+    color: white; 
 }
 
 .team h1 {
@@ -551,19 +554,20 @@ section nav ul li a.login_icon::after {
     justify-content: center;
     font-size: 55px;
     margin-bottom: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .team h1 span {
-    color: #4b2e2e;
     margin-left: 10px;
     font-family: 'MV Boli', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .team h1 span::after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #4b2e2e;
+    background: white;
     display: block;
     position: relative;
     bottom: 10px;

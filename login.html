@@ -5,14 +5,15 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Twisted Tees</title>
- <link rel="icon" href="Assets/logo.jpg" type="image/png">
+ <link rel="icon" type="image/x-icon" href="logo/logos2.png" />
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
  <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
- <!--Register-->
+ <!-- Register Form -->
  <div class="container" id="signup" style="display:none;">
+  <button class="close-btn" onclick="closeForm()">×</button>
   <h1 class="form-title">Register</h1>
   <form method="post" action="register.php" onsubmit="return validateSignUp()">
    <div class="input-group">
@@ -37,9 +38,7 @@
    </div>
    <input type="submit" class="btn" value="Sign Up" name="signUp">
   </form>
-  <p class="or">
-   ----------or--------
-  </p>
+  <p class="or">----------or--------</p>
   <div class="icons">
    <a href="https://accounts.google.com/ServiceLogin" target="_blank">
     <i class="fab fa-google"></i>
@@ -53,9 +52,11 @@
    <button id="signInButton">Sign In</button>
   </div>
  </div>
+
  <!---Sign In-->
  <div class="container" id="signIn">
-  <img src="logo/logo.png" alt="Sign In Image" class="sign-in-image">
+  <button class="close-btn" onclick="closeForm()">×</button>
+  <img src="logo/logos.png" alt="Sign In Image" class="sign-in-image">
   <h1 class="form-title">Sign In</h1>
   <form method="post" action="register.php" onsubmit="return validateSignIn()">
    <div class="input-group">

@@ -129,7 +129,7 @@ function validateSignIn() {
 }
 
 function submitForm(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
 
     const formData = new FormData(document.getElementById('contactForm'));
 
@@ -140,7 +140,6 @@ function submitForm(event) {
         .then((response) => response.text())
         .then((data) => {
             if (data.includes('Your message has been saved successfully!')) {
-                // If submission is successful, reset the form
                 document.getElementById('contactForm').reset();
                 alert('Your message has been submitted successfully!');
             } else {
@@ -150,4 +149,8 @@ function submitForm(event) {
         .catch((error) => {
             alert('Error: ' + error);
         });
+}
+
+function closeForm() {
+    window.location.href = 'mainpage.html';
 }

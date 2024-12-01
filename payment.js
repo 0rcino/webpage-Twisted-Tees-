@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buyNowItem = JSON.parse(localStorage.getItem('buyNowItem'));
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     let total = 0;
+
     if (buyNowItem) {
         const productElement = document.createElement('div');
         productElement.innerHTML = `
@@ -53,7 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(
             `Your order has been placed!\nName: ${name}\nAddress: ${address}\nPayment Method: ${paymentMethod}`
         );
-        localStorage.removeItem('buyNowItem');
+
+        if (buyNowItem) {
+            localStorage.removeItem('buyNowItem');
+        } else {
+            localStorage.removeItem('cartItems');
+        }
+
         window.location.href = 'confirmation.html';
     });
 

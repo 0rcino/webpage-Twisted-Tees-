@@ -496,6 +496,7 @@ section nav ul li a.login_icon::after {
 }
 
 .contact .contact_main form .input p {
+    margin-bottom: 0.5rem;
     line-height: 25px;
 }
 
@@ -544,7 +545,7 @@ section nav ul li a.login_icon::after {
     background-repeat: no-repeat;
     padding-top: 30px;
     position: relative;
-    color: white; 
+    color: white;
 }
 
 .team h1 {
@@ -560,7 +561,7 @@ section nav ul li a.login_icon::after {
 .team h1 span {
     margin-left: 10px;
     font-family: 'MV Boli', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .team h1 span::after {

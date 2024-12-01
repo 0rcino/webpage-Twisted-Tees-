@@ -1,0 +1,18 @@
+Order Placed on: 2024-12-01 13:36:04
+Name: Allen Jefferson Orcino 
+Address: 208 Molina St.Purok 6 Alabang Muntinlupa City 
+Payment Method: cash
+Items:
+- Product: Blue T-Shirt Twisteed Tees, Size: L, Quantity: 1, Price: ₱750
+- Product: Black T-Shirt Twisted Tees, Size: M, Quantity: 2, Price: ₱550
+-----------------------------------
+Order Placed on: 2024-12-01 13:38:41
+Name: Allen Jefferson Orcino 
+Address: 208 Molina St. Purok 6 Alabang Muntinlupa city 
+Payment Method: cash
+Items:
+- Product: Black T-Shirt Twisted Tees, Size: L, Quantity: 1, Price per Item: ₱750, Total Price: ₱750
+- Product: Blue T-Shirt Twisteed Tees, Size: M, Quantity: 2, Price per Item: ₱550, Total Price: ₱1100
+-----------------------------------
+Total Amount: ₱1850
+-----------------------------------

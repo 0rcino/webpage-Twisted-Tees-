@@ -40,28 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const address = document.getElementById('address').value;
-        const paymentMethod = document.getElementById('payment-method').value;
-
-        if (total === 0) {
-            alert('Your cart is empty. Please add items before proceeding.');
-            return;
-        }
-
-        alert(
-            `Your order has been placed!\nName: ${name}\nAddress: ${address}\nPayment Method: ${paymentMethod}`
-        );
-
+        const cartItemsInput = document.getElementById('cart-items');
         if (buyNowItem) {
-            localStorage.removeItem('buyNowItem');
+            cartItemsInput.value = JSON.stringify([buyNowItem]);
         } else {
-            localStorage.removeItem('cartItems');
+            cartItemsInput.value = JSON.stringify(cartItems);
         }
 
-        window.location.href = 'confirmation.html';
+        localStorage.removeItem('buyNowItem');
+        localStorage.removeItem('cartItems');
     });
 
     closeBtn.addEventListener('click', () => {

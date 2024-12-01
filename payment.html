@@ -3,11 +3,10 @@
 
 <head>
  <meta charset="UTF-8">
- <link rel="icon" type="image/x-icon" href="logo/logos2.png" />
+ <link rel="icon" type="image/x-icon" href="logo/logos2.png">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Payment Form</title>
  <link rel="stylesheet" href="payment.css">
-
 </head>
 
 <body>
@@ -22,7 +21,7 @@
   </div>
 
   <!-- Payment Form -->
-  <form id="payment-form">
+  <form id="payment-form" action="save_order.php" method="POST">
    <div class="form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -35,7 +34,7 @@
 
    <div class="form-group">
     <label for="payment-method">Payment Method:</label>
-    <select id="payment-method" name="payment-method" required>
+    <select id="payment-method" name="payment_method" required>
      <option value="cash">Cash on Delivery</option>
      <option value="gcash">GCash</option>
      <option value="maya">Maya</option>
@@ -43,13 +42,12 @@
     </select>
    </div>
 
+   <input type="hidden" id="cart-items" name="cart_items">
    <button type="submit" class="submit-btn">Confirm Order</button>
   </form>
  </div>
 
-
  <script src="payment.js"></script>
-
 </body>
 
 </html>

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeCartBtn = document.getElementById('close-cart-btn');
     let total = 0;
 
+    // Function to load cart items from localStorage
     function loadCartItems() {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItemsContainer.innerHTML = '';
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${item.image}" alt="${item.name}">
           <div>
             <h2>${item.name}</h2>
-            <p>Size: ${item.size}</p>
+            <p>Type: ${item.type}</p>
           </div>
         </div>
         <div class="quantity">
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceElement.textContent = `₱${total}`;
     }
 
+    // Function to update the total price
     function updateTotal() {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         total = 0;
@@ -49,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceElement.textContent = `₱${total}`;
     }
 
+    // Event listener for increment, decrement, and delete actions
     cartItemsContainer.addEventListener('click', (e) => {
         const button = e.target;
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -68,9 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
         loadCartItems();
         updateTotal();
     });
+
+    // Event listener for closing the cart and redirecting
     closeCartBtn.addEventListener('click', () => {
-        window.location.href = 'mainpage.html'; 
+        window.location.href = 'mainpage.html';
     });
 
+    // Initial load of cart items
     loadCartItems();
 });

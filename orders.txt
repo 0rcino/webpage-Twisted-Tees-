@@ -16,3 +16,62 @@ Items:
 -----------------------------------
 Total Amount: ₱1850
 -----------------------------------
+Order Placed on: 2024-12-02 08:42:13
+Name: allen jefferson orcino 
+Address: 208 molina st. purok 6 
+Payment Method: cash
+Items:
+- Product: White Lily Bouquet, Size: , Quantity: 1, Price per Item: ₱275, Total Price: ₱275
+- Product: Pink Tulip Bouquet, Size: , Quantity: 1, Price per Item: ₱275, Total Price: ₱275
+-----------------------------------
+Total Amount: ₱550
+-----------------------------------
+Order Placed on: 2024-12-02 09:39:29
+Name: allen 
+Address: purok 6
+Payment Method: cash
+Items:
+- Product: Pink Rose Bouquet, Size: , Quantity: 1, Price per Item: ₱135, Total Price: ₱135
+- Product: Pink Rose Bouquet, Size: , Quantity: 1, Price per Item: ₱275, Total Price: ₱275
+-----------------------------------
+Total Amount: ₱410
+-----------------------------------
+Order Placed on: 2024-12-02 09:48:00
+Name: aj
+Address: hello world 
+Payment Method: cash
+Items:
+- Product: Pink Rose Bouquet, Type: Single, Quantity: 1, Price per Item: ₱135, Total Price: ₱135
+- Product: Pink Rose Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱275, Total Price: ₱275
+-----------------------------------
+Total Amount: ₱410
+-----------------------------------
+Order Placed on: 2024-12-02 10:04:20
+Name: allen 
+Address: aj 
+Payment Method: cash
+Items:
+- Product: Red Rose Bouquet, Type: Bouquet, Quantity: , Price per Item: ₱275, Total Price: ₱0
+-----------------------------------
+Total Amount: ₱0
+-----------------------------------
+Order Placed on: 2024-12-02 10:05:04
+Name: allen 
+Address: hi 
+Payment Method: cash
+Items:
+- Product: Pink Rose Bouquet, Type: Bouquet, Quantity: , Price per Item: ₱275, Total Price: ₱0
+-----------------------------------
+Shipping Fee: ₱50
+Total Amount (including shipping): ₱50
+-----------------------------------
+Order Placed on: 2024-12-02 10:07:02
+Name: ian 
+Address: hotdog
+Payment Method: cash
+Items:
+- Product: Pink Rose Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱275, Total Price: ₱275
+-----------------------------------
+Shipping Fee: ₱50
+Total Amount (including shipping): ₱325
+-----------------------------------

@@ -1,39 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.menu_card').forEach((card) => {
         const priceElement = card.querySelector('.price');
-        const sizeButtons = card.querySelectorAll('.menu_icon i');
+        const typeButtons = card.querySelectorAll('.menu_icon i');
+        const primaryImageContainer = card.querySelector('.menu_image.primary');
+        const secondaryImageContainer = card.querySelector(
+            '.menu_image.secondary'
+        );
         const addToCartButton = card.querySelector('.cart_btn');
         const buyNowButton = card.querySelector('.menu_btn:not(.cart_btn)');
 
-        sizeButtons.forEach((button) => {
+        typeButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const newPrice = button.getAttribute('data-price');
-                priceElement.textContent = newPrice;
-                sizeButtons.forEach((btn) => btn.classList.remove('selected'));
+                const newType = button.getAttribute('data-type');
+
+                priceElement.textContent = `${newPrice}`;
+
+                if (newType === 'Single') {
+                    primaryImageContainer.style.display = 'block';
+                    secondaryImageContainer.style.display = 'none';
+                } else if (newType === 'Bouquet') {
+                    primaryImageContainer.style.display = 'none';
+                    secondaryImageContainer.style.display = 'block';
+                }
+
+                typeButtons.forEach((btn) => btn.classList.remove('selected'));
                 button.classList.add('selected');
             });
         });
 
         addToCartButton.addEventListener('click', () => {
             const productName = card.querySelector('h2').textContent;
-            const productImage = card.querySelector('img').src;
-            const selectedSizeElement = card.querySelector(
+            const selectedTypeElement = card.querySelector(
                 '.menu_icon i.selected'
             );
-            const selectedSize = selectedSizeElement
-                ? selectedSizeElement.getAttribute('data-size')
-                : 'Default';
-            const selectedPrice = selectedSizeElement
-                ? selectedSizeElement.getAttribute('data-price')
-                : priceElement.textContent;
+            const selectedType = selectedTypeElement
+                ? selectedTypeElement.getAttribute('data-type')
+                : 'Single';
+            const selectedPrice = selectedTypeElement
+                ? selectedTypeElement.getAttribute('data-price')
+                : priceElement.textContent.replace('₱', '');
+            const selectedImage =
+                selectedType === 'Single'
+                    ? primaryImageContainer.querySelector('img').src
+                    : secondaryImageContainer.querySelector('img').src;
 
             const cartItems =
                 JSON.parse(localStorage.getItem('cartItems')) || [];
             cartItems.push({
                 name: productName,
-                size: selectedSize,
+                type: selectedType,
                 price: selectedPrice,
-                image: productImage,
+                image: selectedImage,
                 quantity: 1,
             });
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -41,22 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buyNowButton.addEventListener('click', () => {
             const productName = card.querySelector('h2').textContent;
-            const productImage = card.querySelector('img').src;
-            const selectedSizeElement = card.querySelector(
+            const selectedTypeElement = card.querySelector(
                 '.menu_icon i.selected'
             );
-            const selectedSize = selectedSizeElement
-                ? selectedSizeElement.getAttribute('data-size')
-                : 'Default';
-            const selectedPrice = selectedSizeElement
-                ? selectedSizeElement.getAttribute('data-price')
-                : priceElement.textContent;
+            const selectedType = selectedTypeElement
+                ? selectedTypeElement.getAttribute('data-type')
+                : 'Single';
+            const selectedPrice = selectedTypeElement
+                ? selectedTypeElement.getAttribute('data-price')
+                : priceElement.textContent.replace('₱', '');
+            const selectedImage =
+                selectedType === 'Single'
+                    ? primaryImageContainer.querySelector('img').src
+                    : secondaryImageContainer.querySelector('img').src;
 
             const buyNowItem = {
                 name: productName,
-                size: selectedSize,
+                type: selectedType,
                 price: selectedPrice,
-                image: productImage,
+                image: selectedImage,
             };
 
             localStorage.setItem('buyNowItem', JSON.stringify(buyNowItem));

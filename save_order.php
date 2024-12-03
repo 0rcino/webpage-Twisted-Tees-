@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $orderDetails .= "Items:\n";
 
     $total = 0;
-    $shippingFee = 50; 
+    $shippingFee = 100; 
 
     if (!empty($cartItems)) {
         foreach ($cartItems as $item) {

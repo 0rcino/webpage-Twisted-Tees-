@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buyNowItem = JSON.parse(localStorage.getItem('buyNowItem'));
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     let total = 0;
-    const shippingFee = 50;
+    const shippingFee = 100;
 
     if (buyNowItem) {
         const productElement = document.createElement('div');

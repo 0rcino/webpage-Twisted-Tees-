@@ -56,7 +56,7 @@ section nav ul li a::after {
     content: '';
     width: 0;
     height: 2px;
-    background: #4b2e2e;
+    background: lightblue;
     display: block;
     transition: 0.2s linear;
 }
@@ -66,7 +66,7 @@ section nav ul li a:hover::after {
 }
 
 section nav ul li a:hover {
-    color: #4b2e2e;
+    color: #3c513e;
 }
 
 section .main {
@@ -86,7 +86,7 @@ section .main .men_text h1 {
 
 section .main .men_text h1 span {
     margin-left: 15px;
-    color: #4b2e2e;
+    color: #3c513e;
     font-family: mv boli;
     line-height: 22px;
     font-size: 50px;
@@ -111,7 +111,7 @@ section p {
 }
 
 section .main_btn {
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background-color: #3c513e;
     position: relative;
     left: 150px;
     width: 138px;
@@ -160,7 +160,7 @@ section nav ul li a.login_icon::after {
 }
 
 .about .about_main .about_text h1 span {
-    color: #4b2e2e;
+    color: #3c513e;
     font-family: mv boli;
 }
 
@@ -187,7 +187,7 @@ section nav ul li a.login_icon::after {
 
 .about .about_btn {
     margin-top: 1rem;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     padding: 12px 25px;
     text-decoration: none;
     color: #fff;
@@ -211,7 +211,7 @@ section nav ul li a.login_icon::after {
 }
 
 .menu h1 span {
-    color: #4b2e2e;
+    color: #3c513e;
     margin-left: 15px;
     font-family: 'MV Boli', sans-serif;
 }
@@ -220,7 +220,7 @@ section nav ul li a.login_icon::after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #4b2e2e;
+    background: #3c513e;
     display: block;
     position: relative;
     bottom: 15px;
@@ -276,7 +276,7 @@ section nav ul li a.login_icon::after {
     margin: 10px 0;
     font-size: 20px;
     font-weight: bold;
-    color: #4b2e2e;
+    color: #3c513e;
     text-transform: capitalize;
 }
 
@@ -294,7 +294,7 @@ section nav ul li a.login_icon::after {
     gap: 12px;
     cursor: pointer;
     margin: 10px 0;
-    color: #4b2e2e;
+    color: #3c513e;
     font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -302,13 +302,13 @@ section nav ul li a.login_icon::after {
 
 .menu .menu_box .menu_card .menu_info .menu_icon i {
     padding: 5px 10px;
-    border: 1px solid #4b2e2e;
+    border: 1px solid #3c513e;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu .menu_box .menu_card .menu_info .menu_icon i:hover {
-    background-color: #4b2e2e;
+    background-color: #3c513e;
     color: #fff;
 }
 
@@ -318,7 +318,7 @@ section nav ul li a.login_icon::after {
     justify-content: center;
     text-decoration: none;
     color: white;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     padding: 10px 20px;
     margin: 10px auto;
     width: 180px;
@@ -330,12 +330,12 @@ section nav ul li a.login_icon::after {
 }
 
 .menu .menu_box .menu_card .menu_info .menu_btn:hover {
-    background: linear-gradient(45deg, #4b2e2e, #8b572a);
+    background: #3c513e;
     transform: translateY(-3px);
 }
 
 .menu .menu_box .menu_card .menu_info .cart_btn {
-    background: #c5a880;
+    background: #3c513e;
     color: white;
     font-weight: bold;
 }
@@ -373,7 +373,7 @@ section nav ul li a.login_icon::after {
 
 .gallery h1 span {
     margin-left: 15px;
-    color: #4b2e2e;
+    color: #3c513e;
     font-family: mv boli;
 }
 
@@ -381,7 +381,7 @@ section nav ul li a.login_icon::after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #4b2e2e;
+    background: #3c513e;
     display: block;
     position: relative;
     bottom: 15px;
@@ -431,7 +431,7 @@ section nav ul li a.login_icon::after {
     position: absolute;
     margin-top: 100px;
     color: white;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     padding: 7px 25px;
     text-decoration: none;
     opacity: 0;
@@ -464,7 +464,7 @@ section nav ul li a.login_icon::after {
 }
 
 .contact h1 span {
-    color: #4b2e2e;
+    color: #3c513e;
     margin-right: 15px;
     font-family: mv boli;
 }
@@ -473,7 +473,7 @@ section nav ul li a.login_icon::after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #4b2e2e;
+    background: #3c513e;
     display: block;
     position: relative;
     bottom: 15px;
@@ -485,8 +485,8 @@ section nav ul li a.login_icon::after {
     justify-content: space-around;
 }
 
-.contact .contact_main .order_image img {
-    width: 300px;
+.contact .contact_main .contact_image img {
+    width: 450px;
 }
 
 .contact .contact_main form {
@@ -509,6 +509,7 @@ section nav ul li a.login_icon::after {
     width: 300px;
     height: 35px;
     padding: 0 10px;
+    color: #3c513e;
     border: solid 1px #cccccc;
     background: #eeeeee;
     outline: none;
@@ -522,12 +523,12 @@ section nav ul li a.login_icon::after {
 
 .contact .contact_main form .input input:focus,
 .contact .contact_main form .input textarea:focus {
-    border: 2px solid #4b2e2e;
+    border: 2px solid #3c513e;
 }
 
 .contact .contact_main form .order_btn {
     padding: 10px 0;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     color: white;
     width: 40%;
     text-align: center;
@@ -539,7 +540,7 @@ section nav ul li a.login_icon::after {
 .team {
     width: 100%;
     height: 100vh;
-    background-image: url(twisted.jpg);
+    background-image: url(logo/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -614,13 +615,13 @@ section nav ul li a.login_icon::after {
 }
 
 .team .team_box .profile .info .name {
-    color: #4b2e2e;
+    color: #3c513e;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .team .team_box .profile .info .bio {
-    color: #333;
+    color: rgb(10, 10, 232);
     font-size: 1.1em;
     margin-bottom: 15px;
 }
@@ -630,24 +631,14 @@ section nav ul li a.login_icon::after {
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-}
-
-.team .team_box .profile .info .team_icon i {
-    color: #333;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.team .team_box .profile .info .team_icon i:hover {
-    color: brown;
+    color: #3c513e;
 }
 
 footer {
     margin-top: 15rem;
     width: 100%;
     padding: 30px 20px 0 20px;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     color: #fff;
     font-family: 'Arial', sans-serif;
 }
@@ -681,19 +672,19 @@ footer .footer_main .footer_tag a {
 
 footer .footer_main .footer_tag a:hover {
     text-decoration: underline;
-    color: #ffcc99;
+    color: lightblue;
 }
 
 footer .footer_main .footer_tag i {
     margin: 0 10px;
     cursor: pointer;
-    color: #ffe5d1;
+    color: lightblue;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 footer .footer_main .footer_tag i:hover {
-    color: #ffcc99;
+    color: lightblue;
 }
 
 footer .end {
@@ -701,18 +692,18 @@ footer .end {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    background: #4b2e2e;
-    color: #ffe5d1;
+    background: #527b56;
+    color: lightblue;
     font-size: 14px;
 }
 
 footer .end span {
-    color: #ffcc99;
+    color: lightblue;
     margin-left: 5px;
 }
 
 footer .end a {
-    color: #ffcc99;
+    color: white;
     text-decoration: underline;
     font-weight: bold;
 }

@@ -74,7 +74,7 @@ textarea {
 button.submit-btn {
     width: 100%;
     padding: 10px;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     color: white;
     border: none;
     border-radius: 5px;

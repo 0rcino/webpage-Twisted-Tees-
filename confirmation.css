@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@ a {
     display: inline-block;
     margin-top: 20px;
     background-color: #ffffff;
-    color: #8b572a; 
+    color: #3c513e;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    background-color: #8b572a; 
+    background-color: #3c513e;
     color: #ffffff;
 }
 
@@ -53,7 +53,7 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 400px;
 }

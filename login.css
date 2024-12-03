@@ -24,7 +24,7 @@ form {
     font-weight: bold;
     text-align: center;
     padding: 1.3rem;
-    color: brown;
+    color: #3c513e;
     margin-bottom: 0.4rem;
 }
 input {
@@ -73,7 +73,7 @@ input:not(:placeholder-shown) ~ label {
 }
 .recover a {
     text-decoration: none;
-    color: brown;
+    color: #3c513e;
 }
 .recover a:hover {
     color: blue;
@@ -86,7 +86,7 @@ input:not(:placeholder-shown) ~ label {
     outline: none;
     border: none;
     width: 100%;
-    background: linear-gradient(45deg, #8b572a, #4b2e2e);
+    background: #3c513e;
     color: white;
     cursor: pointer;
     transition: 0.9s;
@@ -103,7 +103,7 @@ input:not(:placeholder-shown) ~ label {
     text-align: center;
 }
 .icons i {
-    color: brown;
+    color: #3c513e;
     padding: 0.8rem 1.5rem;
     border-radius: 10px;
     font-size: 1.5rem;
@@ -125,7 +125,7 @@ input:not(:placeholder-shown) ~ label {
     font-weight: bold;
 }
 button {
-    color: brown;
+    color: #3c513e;
     border: none;
     background-color: transparent;
     font-size: 1rem;

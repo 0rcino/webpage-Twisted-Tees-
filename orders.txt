@@ -75,3 +75,23 @@ Items:
 Shipping Fee: ₱50
 Total Amount (including shipping): ₱325
 -----------------------------------
+Order Placed on: 2024-12-03 15:29:40
+Name: aj 
+Address: Hello World 
+Payment Method: cash
+Items:
+- Product: Pink Rose Ribbon Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱250, Total Price: ₱250
+-----------------------------------
+Shipping Fee: ₱100
+Total Amount (including shipping): ₱350
+-----------------------------------
+Order Placed on: 2024-12-03 15:31:17
+Name: ian 
+Address: bading 
+Payment Method: cash
+Items:
+- Product: Blue Rose Ribbon Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱250, Total Price: ₱250
+-----------------------------------
+Shipping Fee: ₱100
+Total Amount (including shipping): ₱350
+-----------------------------------

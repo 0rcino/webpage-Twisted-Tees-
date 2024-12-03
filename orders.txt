@@ -95,3 +95,16 @@ Items:
 Shipping Fee: ₱100
 Total Amount (including shipping): ₱350
 -----------------------------------
+Order Placed on: 2024-12-03 15:49:10
+Name: allen 
+Address: ian bading 
+Payment Method: cash
+Items:
+- Product: Red Rose Ribbon Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱250, Total Price: ₱250
+- Product: Pink Rose Ribbon Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱250, Total Price: ₱250
+- Product: Violet Tulip Crochet Bouquet, Type: Single, Quantity: 1, Price per Item: ₱135, Total Price: ₱135
+- Product: Blue Rose Ribbon Bouquet, Type: Bouquet, Quantity: 1, Price per Item: ₱250, Total Price: ₱250
+-----------------------------------
+Shipping Fee: ₱100
+Total Amount (including shipping): ₱985
+-----------------------------------
